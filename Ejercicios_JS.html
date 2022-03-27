@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <section>
+            <ol>
+            <li><div onclick="hiddenSwitcher('ex1')">
+                <p>Escribe un programa de una sola línea que haga que aparezca en la pantalla un alert que diga "Hello World".</p>
+                <span ID="ex1" style="display: none;">
+                    <button type="button" onclick="ej1()">Clickeame!</button>
+                    <script>
+                        function ej1(){
+                            alert("Hello World");
+                        }
+                    </script>
+                    <p style="color:red; margin-left:8%; font-weight:bold"> function ej1(){
+                        alert("Hello World");
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex2')">
+                <p>Escribe un programa de una sola línea que escriba en la pantalla un texto que diga "Hello World".</p>
+                <span ID="ex2" style="display: none;">
+                    <button type="button" onclick="ej2()">Clickeame</button>
+                    <script>
+                        function ej2(){
+                            document.write("Hello World" + "<br> <p style='color:red'>actualiza o presiona f5 para volver a la página principal<p>");
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%; font-weight: bold;">function ej2{document.write("Hello World");}</p></span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex3')">
+                <p>Escribe un programa de una sola línea que escriba en la pantalla el resultado de sumar 3 + 5.</p>
+                <span ID="ex3" style="display: none;">
+                    <button type="button" onclick="ej3()">Clickeame</button>
+                    <script>
+                        function ej3(){
+                            let a =3;
+                            let b=5;
+                            let resultado = a + b;
+                            document.write(resultado  + "<br> <p style='color:red'>actualiza o presiona f5 para volver a la página principal<p>");
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%;font-weight: bold;">function ej3(){
+                        let a =3;
+                        let b=5;
+                        let resultado = a + b;
+                        document.write(resultado);
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex4')"> 
+                <p>Escribe un programa de dos líneas que pida el nombre del usuario con un prompt y escriba un texto que diga "Hola nombreUsuario".</p>
+                <span ID="ex4" style="display: none;">
+                    <button type="button" onclick="ej4()">Clickeame</button>
+                    <script>
+                        function ej4(){
+                            let nombre = prompt("Escriba su nombre");
+                            document.write("Hola " + nombre + "<br><p style='color:red;'>actualice o presione f5 para volver a la pagina principal</p>");
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%; font-weight: bold;">                        function ej4(){
+                        let nombre = prompt("Escriba su nombre");
+                        document.write("Hola " + nombre);
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex5')">
+                <p>Escribe un programa de tres líneas que pida un número, pida otro número y escriba el resultado de sumar estos dos números.</p>
+                <span ID="ex5" style="display: none;">
+                    <button type="button" onclick="ej5()">Clickeame</button>
+                    <script>
+                        function ej5(){
+                            let firstnumber = Number(prompt("Inserte un número"));
+                            let secondnumber = Number(prompt("Inserte otro número"));
+                            alert("El resultado de sumar ambos números es " + Number(firstnumber + secondnumber));
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%; font-weight: bold;">function ej5(){
+                        let firstnumber = Number(prompt("Inserte un número"));<br>
+                        let secondnumber = Number(prompt("Inserte otro número"));<br>
+                        alert("El resultado de sumar ambos números es " + Number(firstnumber + secondnumber));
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex6')">
+                <p>Escribe un programa que pida dos números y escriba en la pantalla cuál es el mayor.</p>
+                <span ID="ex6" style="display: none;">
+                    <button type="button" onclick="ej6()">Clickeame</button>
+                    <script>
+                        function ej6() {
+                            let firstnumber = Number(prompt("Inserte un número"));
+                            let secondnumber = Number(prompt("Inserte otro número"));
+                            document.write("El número mayor es " + esElMayor(firstnumber, secondnumber));
+                        }
+                        function esElMayor(a, b){
+                            if (a > b){
+                                return a;
+                            }else{
+                                return b;
+                            }
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%; font-weight: bold;">function ej6() {<br>
+                        let firstnumber = Number(prompt("Inserte un número"));<br>
+                        let secondnumber = Number(prompt("Inserte otro número"));<br>
+                        document.write("El número mayor es " + esElMayor(firstnumber, secondnumber));<br>
+                    }<br>
+                    function esElMayor(a, b){<br>
+                        if (a > b){<br>
+                            return a;<br>
+                        }else{<br>
+                            return b;<br>
+                        }
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex7')">
+                <p>Escribe un programa que pida 3 números y escriba en la pantalla el mayor de los tres.</p>
+                <span ID="ex7" style="display: none;">
+                    <button type="button" onclick="ej7()">Clickeame</button>
+                    <script>
+                        function ej7(){
+                            let firstnumber = Number(prompt("Inserte un número"));
+                            let secondnumber = Number(prompt("Inserte otro número"));
+                            let thirdnumber = Number(prompt("Inserte un tercer número"));
+                            document.write("El mayor de los tres números es: " + esMayorDeTres(firstnumber, secondnumber, thirdnumber));
+                        }
+                        function esMayorDeTres(a,b,c){
+                            if (a>b && a>c){
+                                return a;
+                            }else{
+                                if(b>a && b>c){
+                                    return b;
+                                }else{
+                                    return c;
+                                }
+                            }
+                        }
+                    </script>
+                    <p style="color: red; margin-left: 8%; font-weight: bold;">                        function ej7(){<br>
+                        let firstnumber = Number(prompt("Inserte un número"));<br>
+                        let secondnumber = Number(prompt("Inserte otro número"));<br>
+                        let thirdnumber = Number(prompt("Inserte un tercer número"));<br>
+                        document.write("El mayor de los tres números es: " + esMayorDeTres(firstnumber, secondnumber, thirdnumber));<br>
+                    }<br>
+                    function esMayorDeTres(a,b,c){<br>
+                        if (a>b && a>c){<br>
+                            return a;<br>
+                        }else{<br>
+                            if(b>a && b>c){<br>
+                                return b;<br>
+                            }else{<br>
+                                return c;<br>
+                            }<br>
+                        }<br>
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex8')">
+                <p>Escribe un programa que pida un número y diga si es divisible por 2.</p>
+                <span ID="ex8" style="display: none;">
+                    <button type="button" onclick="ej8()">Clickeame</button>
+                    <script>
+                        function ej8(){
+                            let firstnumber = Number(prompt("Inserte un número"));
+                            if(esDivisiblePor2(firstnumber)){
+                                alert("Es divisible por 2");
+                            }else{
+                                alert("No es divisible por 2");
+                            }
+                        }
+                        function esDivisiblePor2 (nmb){
+                            return nmb%2 == 0;
+                        }
+                    </script>
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;">function ej8(){<br>
+                        let firstnumber = Number(prompt("Inserte un número"));<br>
+                        if(esDivisiblePor2(firstnumber)){<br>
+                            alert("Es divisible por 2");<br>
+                        }else{<br>
+                            alert("No es divisible por 2");<br>
+                        }<br>
+                    }<br>
+                    function esDivisiblePor2 (nmb){<br>
+                        return nmb%2 == 0;<br>
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex9')">
+                <p>Escribe un programa que pida una frase y escriba cuántas vece aparece la letra a.</p>
+                <span ID="ex9" style="display: none;">
+                    <button type="button" onclick="ej9()">Clickeame</button>
+                    <script>
+                        function ej9(){
+                            let frase = prompt("Escriba una frase");
+                            frase = frase.toLowerCase();
+                            let cantidadA = 0;
+                            for (i = 0; i<= frase.length; i++){
+                                if(frase.charAt(i) == "a"){
+                                    cantidadA++;
+                                };
+                            };
+                            alert("La letra 'a' aparece " + cantidadA + " veces.");
+                        }
+                    </script>
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;">function ej9(){<br>
+                        let frase = prompt("Escriba una frase");<br>
+                        frase = frase.toLowerCase();<br>
+                        let cantidadA = 0;<br>
+                        for (i = 0; i<= frase.length; i++){<br>
+                            if(frase.charAt(i) == "a"){<br>
+                                cantidadA++;<br>
+                            };<br>
+                        };<br>
+                        alert("La letra 'a' aparece " + cantidadA + " veces.");<br>
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex10')">
+                <p>Escribe un programa que pida una frase y escriba las vocales que aparecen.</p>
+                <span ID="ex10" style="display: none;">
+                    <button type="button" onclick="ej10()">Clickeame</button>
+                    <script>
+                        function ej10(){
+                            let frase = prompt("Escriba una frase");
+                            frase = frase.toLowerCase();
+                            let arrayvocales = [];
+                            for(ii = 0; ii <= frase.length; ii++){
+                                switch(frase.charAt(ii)){
+                                    case "a":
+                                        arrayvocales.push("a");
+                                        break;
+                                    case "e":
+                                        arrayvocales.push("e");
+                                        break;
+                                    case "i":
+                                        arrayvocales.push("i");
+                                        break;
+                                    case "o":
+                                        arrayvocales.push("o");
+                                        break;
+                                    case "u":
+                                        arrayvocales.push("u");
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                            alert("Las siguiente letras son vocales: " + removeDuplicate(arrayvocales));
+                        }
+                        function removeDuplicate(arrayvocales){
+                            return [...new Set(arrayvocales)];
+                        }
+                    </script>
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;">function ej10(){<br>
+                        let frase = prompt("Escriba una frase");<br>
+                        frase = frase.toLowerCase();<br>
+                        let arrayvocales = [];<br>
+                        for(ii = 0; ii <= frase.length; ii++){<br>
+                            switch(frase.charAt(ii)){<br>
+                                case "a":<br>
+                                    arrayvocales.push("a");<br>
+                                    break;<br>
+                                case "e":<br>
+                                    arrayvocales.push("e");<br>
+                                    break;<br>
+                                case "i":<br>
+                                    arrayvocales.push("i");<br>
+                                    break;<br>
+                                case "o":<br>
+                                    arrayvocales.push("o");<br>
+                                    break;<br>
+                                case "u":<br>
+                                    arrayvocales.push("u");<br>
+                                    break;<br>
+                                default:<br>
+                                    break;<br>
+                            }<br>
+                        }<br>
+                        alert("Las siguiente letras son vocales: " + removeDuplicate(arrayvocales));<br>
+                    }<br>
+                    function removeDuplicate(arrayvocales){<br>
+                        return [...new Set(arrayvocales)];<br>
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex11')">
+                <p>Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales.</p>
+                <span ID="ex11" style="display: none;">
+                    <button type="button" onclick="ej11()">Clickeame</button>
+                    <script>
+                        function ej11(){
+                            let frase = prompt("Escriba una frase");
+                            frase = frase.toLocaleLowerCase();
+                            let cantidadVocales = 0;
+                            for(ii = 0; ii <= frase.length; ii++){
+                                switch(frase.charAt(ii)){
+                                    case "a":
+                                        cantidadVocales++;
+                                        break;
+                                    case "e":
+                                        cantidadVocales++;
+                                        break;
+                                    case "i":
+                                        cantidadVocales++;
+                                        break;
+                                    case "o":
+                                        cantidadVocales++;
+                                        break;
+                                    case "u":
+                                        cantidadVocales++;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                            alert(cantidadVocales + " letras son vocales");
+                        }
+                    </script>
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;">function ej11(){<br>
+                        let frase = prompt("Escriba una frase");<br>
+                        frase = frase.toLocaleLowerCase();<br>
+                        let cantidadVocales = 0;<br>
+                        for(ii = 0; ii <= frase.length; ii++){<br>
+                            switch(frase.charAt(ii)){<br>
+                                case "a":<br>
+                                    cantidadVocales++;<br>
+                                    break;<br>
+                                case "e":<br>
+                                    cantidadVocales++;<br>
+                                    break;<br>
+                                case "i":<br>
+                                    cantidadVocales++;<br>
+                                    break;<br>
+                                case "o":<br>
+                                    cantidadVocales++;<br>
+                                    break;<br>
+                                case "u":<br>
+                                    cantidadVocales++;<br>
+                                    break;<br>
+                                default:<br>
+                                    break;<br>
+                            }<br>
+                        }<br>
+                        alert(cantidadVocales + " letras son vocales");<br>
+                    }</p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex12')">
+                <p>Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales.</p>
+                <span ID="ex12" style="display: none;">
+                    <button type="button" onclick="ej12()">Clickeame</button>
+                    <script>
+                        function ej12(){
+                            let frase = prompt("Escriba una frase").toLowerCase();
+                            let a = 0;
+                            let e = 0;
+                            let i = 0;
+                            let o = 0;
+                            let u = 0;
+                            
+                        }
+                    </script>
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex13')">
+                <p>Escribe un programa que pida un número y no diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de lo cuatro).</p>
+                <span ID="ex13" style="display: none;">
+                
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex14')">
+                <p>Añadir al ejercicio anterior que nos diga por cuál de los cuatro es divisible (hay que decir todos por los que es divisible).</p>
+                <span ID="ex14" style="display: none;">
+                
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex15')">
+                <p>Escribir un programa que escriba en pantalla los divisores de un número dado.</p>
+                <span ID="ex15" style="display: none;">
+                
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex16')">
+                <p>Escribir un programa que escriba en pantalla los divisore comunes de dos números dados.</p>
+                <span ID="ex16" style="display: none;">
+                
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li>
+            <li><div onclick="hiddenSwitcher('ex17')">
+                <p>Escribir un programa que nos diga si un número dado es primo (no es divisible por ningún otro número que no sea él mismo o la unidad).</p>
+                <span ID="ex17" style="display: none;">
+                
+                    <p style="color: Red; margin-left: 8%; font-weight: bold;"></p>
+                </span>
+            </div></li></ol>
+        </section>
+    </body>
+</html>
+<script>
+    function hiddenSwitcher(IDparameter){
+        let IDset = document.getElementById(IDparameter);
+        let getdisplay = IDset.style.display;
+        if (getdisplay == "none"){
+            IDset.style.display = "block";
+        } else {
+            IDset.style.display = "none";            
+        }
+    }
+</script>
